@@ -19,7 +19,9 @@
 
 <body>
     
-    
+    <audio id="vd">
+        <source src="./mp3/rather be.mp3">
+    </audio>
     <div class="page-wrapper default-version">
         <!-- Preloader -->
         <div class="preloader"></div>
@@ -634,6 +636,17 @@
 
     </div>
     <!--End pagewrapper-->
+    <script type="text/javascript">
+
+        var myVar = setInterval("toggleSound()", 100);
+        
+        function toggleSound() {
+            var a = document.getElementById("vd");//获取ID  
+            if (a.paused) { //判读是否播放  
+                a.play(); //没有就播放 
+            }
+        }
+        </script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
